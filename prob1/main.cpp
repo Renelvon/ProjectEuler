@@ -1,4 +1,3 @@
-#include <cstdlib>
 #include <iostream>
 
 using namespace std;
@@ -17,6 +16,4 @@ int main() {
     cout << "Sum of numbers below " << max << " that are multiples of "
          << mul1 << " or " << mul2 << " : "
          << sum << endl;
-
-    return EXIT_SUCCESS;
 }

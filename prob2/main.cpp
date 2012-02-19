@@ -1,4 +1,3 @@
-#include <cstdlib>
 #include <iostream>
 
 using namespace std;
@@ -18,6 +17,4 @@ int main() {
 
     cout << "The sum of all even Fibonacci numbers not exceeding " << max
          << " is: " << sum << endl;
-
-    return EXIT_SUCCESS;
 }
