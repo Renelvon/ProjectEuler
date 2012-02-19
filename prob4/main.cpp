@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 
 using namespace std;
@@ -17,8 +18,13 @@ int main() {
     for (unsigned int a = 999; a > 99; --a) {
         for (unsigned int b = a; b > 99; --b) {
             candidate = a * b;
-            if (candidate > number && isPalindrome6(candidate))
-                number = candidate;
+            if (isPalindrome6(candidate)) {
+                number = max(candidate, number);
+                break;
+            }
+            if (candidate < number) {
+                break;
+            }
         }
 
     }
