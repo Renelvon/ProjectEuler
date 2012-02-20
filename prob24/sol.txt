@@ -1,0 +1,37 @@
+We wish to find the millionth lexicographic permutation of {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}.
+In the following text the digits of the permutation are numbered from 1 to 10, starting from the MSB digit.
+
+For each of these digits, there are 9! = 362880 permutations that have the digit in question at the front.
+1000000 = 2 * 362880 + 274240. Therefore, the millionth permutation has 2 as its 1st digit.
+
+We wish to find the 274240th lexicographic permutation of {0, 1, 3, 4, 5, 6, 7, 8, 9}.
+For each of these digits, there are 8! = 40320 permutations that have the digit in question at the front.
+274240 = 6 * 40320 + 32320. Therefore, the millionth permutation has 7 as its 2nd digit.
+
+We wish to find the 32320th lexicographic permutation of {0, 1, 3, 4, 5, 6, 8, 9}.
+For each of these digits, there are 7! = 5040 permutations that have the digit in question at the front.
+32320 = 6 * 5040 + 2080. Therefore, the millionth permutation has 8 as its 3rd digit.
+
+We wish to find the 2080th lexicographic permutation of {0, 1, 3, 4, 5, 6, 9}.
+For each of these digits, there are 6! = 720 permutations that have the digit in question at the front.
+2080 = 2 * 720 + 640. Therefore, the millionth permutation has 3 as its 4th digit.
+
+We wish to find the 640th lexicographic permutation of {0, 1, 4, 5, 6, 9}.
+For each of these digits, there are 5! = 120 permutations that have the digit in question at the front.
+640 = 5 * 120 + 40. Therefore, the millionth permutation has 9 as its 5th digit.
+
+We wish to find the 40th lexicographic permutation of {0, 1, 4, 5, 6}.
+For each of these digits, there are 4! = 24 permutations that have the digit in question at the front.
+40 = 1 * 24 + 16. Therefore, the millionth permutation has 1 as its 6th digit.
+
+We wish to find the 16th lexicographic permutation of {0, 4, 5, 6}.
+For each of these digits, there are 3! = 6 permutations that have the digit in question at the front.
+16 = 2 * 6 + 4. Therefore, the millionth permutation has 5 as its 7th digit.
+
+We wish to find the 4th lexicographic permutation of {0, 4, 6}.
+For each of these digits, there are 2! = 6 permutations that have the digit in question at the front.
+4 = 2 * 2 + 0.
+Because there are no permutations left after this step, the millionth permutation has 4 as its 8th digit
+and the rest of the digits follow in reverse lexicographic order, {6, 0}.
+
+Thus the millionth permutation of {0, 1, 2, 3, 4, 5, 6, 7, 8, 9} is 2783915460.
