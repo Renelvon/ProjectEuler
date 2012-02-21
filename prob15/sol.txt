@@ -1,0 +1,10 @@
+Let C(a, b) denote the 'a choose b' function (binomial coefficient).
+
+If the board is n * n and we start at the top left corner, then we must go n times down and n times right in order to reach the bottom right corner.
+
+If we consider the n downward movements as fixed, there are (n + 1) places to inject the right-ward movements: n places before the i-th downward movement and an extra place after all the downward movements.
+
+So the total number of routes is equal to the number of arrangements of n non-discriminable objects in (n + 1) discriminable groups.
+This is equal to C((n + 1) + n - 1, n) = C(2n, n).
+
+For n = 20, we have, thus: C(40, 20) = 137846528820.
