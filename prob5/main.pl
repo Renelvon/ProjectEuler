@@ -1,3 +1,5 @@
+% SWI-prolog
+% 
 % GCD.
 % Generalised for negative numbers.
 % Implementation as arithmetic function pending...
@@ -17,6 +19,4 @@ lcm_l([N], N).
 lcm_l([N, M], G) :- !, lcm(N, M, G).
 lcm_l([N, M | T], G) :- lcm(N, M, NewL), lcm_l([NewL | T], G).
 
-range(A, B, L) :- (A =< B -> NewA is A + 1, range(NewA, B, NewL), L = [A | NewL]) ; L = [].
-
-sol5(LCM) :- range(1, 20, L), lcm_l(L, LCM).
+sol5(LCM) :- numlist(1, 20, L), lcm_l(L, LCM).
