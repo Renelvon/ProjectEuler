@@ -5,23 +5,25 @@ using namespace std;
 
 int main() {
     const unsigned int target = 100;
-    /* ways[i][j] is the number of ways j can be written
+    /* ways[n][i] is the number of ways n can be written
      * as a sum of one or more positive integers not exceeding i.
      */
     unsigned int ways[target + 1][target + 1], sum;
     fill(ways[0], ways[0] + target + 1, 0);
     fill(ways[1] + 1, ways[1] + target + 1, 1);
-    for (unsigned int i = 1; i < target + 1; ++i) {
-        ways[i][0] = 0;
+    for (unsigned int n = 1; n < target + 1; ++n) {
+        ways[n][0] = 0;
     }
-    for (unsigned int i = 2; i < target + 1; ++i) {
-        for (unsigned int j = 1; j < target + 1; ++j) {
+    for (unsigned int n = 2; n < target + 1; ++n) {
+        for (unsigned int i = 1; i < n; ++i) {
             sum = 0;
-            for (unsigned int k = 1; k < i + 1 && k < j; ++k) {
-                sum += ways[k][j - k];
+            for (unsigned int j = 1; j < i + 1; ++j) {
+                sum += ways[n - j][j];
             }
-            ways[i][j] = sum + (i < j ? 0 : 1);
+            ways[n][i] = sum;
         }
+        ways[n][n] = ways[n][n - 1] + 1;
+        fill(ways[n] + n, ways[n] + target + 1, ways[n][n]);
     }
 
     cout << "There are " << (0 == target ? 0 : (ways[target][target] - 1))
