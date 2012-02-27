@@ -24,7 +24,6 @@ int main() {
         }
     }
 
-    // BUGGY
     bool flag;
     unsigned int digits[10];
     unsigned int d, num, ncirc = 4; // Code below does accept 2, 3, 5, 7.
