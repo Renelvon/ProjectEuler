@@ -28,7 +28,7 @@ int main() {
         }
     }
 
-    cout << "The value of n <= " << intmax << " for which n/φ(n)"
+    cout << "The value of n <= " << intmax << " for which n/phi(n)"
          << "\nis a maximum is: " << bestn << endl;
     
     delete[] phi;
