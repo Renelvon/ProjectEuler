@@ -1,0 +1,5 @@
+*.o
+*.swp
+main
+parse
+lex.yy.c

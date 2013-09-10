@@ -25,7 +25,7 @@ int main () {
                 seq.push_back(3 * seq.back() + 1);
             }
         }
-        // Update previously uknown degrees
+        // Update previously unknown degrees
         for (unsigned int d = length[seq.back()] + seq.size() - 1, j = 0;
              j < seq.size(); ++j) {
             if (seq[j] < limit && 0 == length[seq[j]]) {
